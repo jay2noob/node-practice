@@ -1,4 +1,8 @@
-const validator = require("validator");
+const chalk = require("chalk");
 const getNotes = require("./notes");
 
-console.log(validator.isURL("https://outlook.com"));
+const msg = getNotes();
+console.log(msg);
+
+const greenMsg = chalk.green.inverse.bold("Success!");
+console.log(greenMsg);
