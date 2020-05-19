@@ -56,5 +56,5 @@ yargs.command({
 
 // Add, remove, read, list
 
-//console.log(process.argv);
+console.log(yargs.argv);
 yargs.parse();
