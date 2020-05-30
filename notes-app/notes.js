@@ -23,7 +23,11 @@ const addNote = function (title, body) {
 };
 
 const removeNote = function (title) {
-  console.log(title); //notes.removeNote(argv.title);
+  const notes = loadNotes();
+  const notesToKeep = notes.filter(function (note) {
+    return note.title !== title;
+  });
+  saveNotes(notesToKeep);
 };
 
 const saveNotes = function (notes) {
